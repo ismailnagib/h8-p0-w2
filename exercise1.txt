@@ -1,0 +1,84 @@
+1. Newton Second Law
+    
+    STORE 'massa' value = 600;
+    STORE 'percepatan' value = 2;
+    STORE 'resultanGaya';
+    CALCULATE 'resultanGaya' = 'massa' * 'percepatan';
+    DISPLAY 'resultanGaya';
+
+2. Tahun Kabisat
+
+    Algoritma:
+
+        1. Masukkan tahun berapa yang ingin dicek.
+        2. Cek apabila tahun habis dibagi 4:
+            2a. Apabila tahun tidak habis dibagi 4, tampilkan: "INI BUKAN TAHUN KABISAT".
+            2b. Apabila tahun habis dibagi 4, lanjut ke step 3.
+        3. Cek apabila tahun habis dibagi 100:
+            3a. Apabila tahun tidak habis dibagi 100, tampilkan "INI TAHUN KABISAT".
+            3b. Apabila tahun habis dibagi 100, cek apabila tahun habis dibagi 400:
+                3ba. Apabila tahun tidak habis dibagi 400, tampilkan: "INI BUKAN TAHUN KABISAT".
+                3bb. Apabila tahun habis dibagi 400, tampilkan "INI TAHUN KABISAT".
+        4. Selesai.
+    
+
+    Pseudocode:
+
+        STORE 'tahun' with any value;
+        IF 'tahun' % 4 != 0 THEN
+            DISPLAY "INI BUKAN TAHUN KABISAT";
+        ELSE
+            IF 'tahun' % 100 != 0 THEN
+                DISPLAY "INI TAHUN KABISAT";
+            ELSE
+                IF 'tahun' % 400 != 0 THEN
+                    DISPLAY "INI BUKAN TAHUN KABISAT";
+                ELSE
+                    DISPLAY "INI TAHUN KABISAT";
+        END IF
+
+3. Laundry Day
+
+    Algoritma:
+
+        1. Cek jumlah pakaian yang sudah ada di mesin cuci:
+            1a. Selama jumlah pakaian di mesin cuci masih kurang dari 20, tambahkan
+                1 pakaian ke dalam mesin cuci, tampilkan jumlah pakaian di dalam mesin
+                cuci, dan kembali ke step 2.
+    
+
+    Pseudocode:
+    
+        STORE 'pakaianDiDalamMesinCuci' value = 0;
+        WHILE 'pakaianDiDalamMesinCuci' < 20 THEN
+            'pakaianDiDalamMesinCuci' ++;
+            DISPLAY "Di dalam mesin cuci sudah ada " + 'pakaianDiDalamMesinCuci' + " pakaian.";
+
+4. Periksa Kuku
+
+    Algoritma:
+
+        1. Simpan jumlah siswa (40 orang).
+        2. Simpan jumlah siswa yang sudah diperika kukunya.
+        3. Simpan panjang kuku siswa yang sedang dicek dalam milimeter.
+        4. Simpan kriteria kuku panjang dalam milimeter.
+        5. Cek jumlah siswa yang sudah diperiksa kukunya:
+            5a. Jika jumlah siswa yang sudah diperiksa kukunya lebih kecil dari jumlah
+                siswa, maka cek kuku siswa:
+                5aa. Jika kuku siswa memenuhi kriteria kuku panjang, tampilkan "Kamu akan saya hukum!".
+                5ab. Jika kuku siswa tidak memenuhi kriteria kuku panjang, tampilkan "Kukumu pendek, kamu hebat!".
+
+    Pseudocode:
+
+        1. STORE 'jumlahSiswa' value = 40;
+        2. STORE 'jumlahSiswaChecked' value = 0;
+        3. STORE 'panjangKukuSiswa';
+        3. STORE 'kriteriaKukuPanjang' value = 5;
+        4. WHILE 'jumlahSiswaChecked' < 'jumlahSiswa' THEN
+            READ & STORE 'panjangKukuSiswa';
+            IF 'panjangKukuSiswa' >= 'kriteriaKukuPanjang' THEN
+                DISPLAY "Kamu akan saya hukum!";
+            ELSE
+                DISPLAY "Kukumu pendek, kamu hebat!";
+            END IF
+            'jumlahSiswaChecked' ++;
